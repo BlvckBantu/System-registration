@@ -14,7 +14,7 @@
         <label>Username:</label>
         <input type="text" name="username" required><br>
         
-        <label>Phone Number (+2547*******):</label>
+        <label>Phone Number (2547XXXXXXXX):</label>
         <input type="text" name="phone" required><br>
 
         <label>Password:</label>
