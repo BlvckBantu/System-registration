@@ -3,7 +3,7 @@ session_start();
 require __DIR__ . '/../config/mpesa_config.php';
 
 $phone = $_SESSION['phone'] ?? ''; // Ensure the user’s phone is available
-$amount = 1500; 
+$amount = 5; 
 $timestamp = date("YmdHis");
 $password = base64_encode(SHORTCODE . PASSKEY . $timestamp);
 
@@ -28,7 +28,7 @@ if (!$token) {
 $stkPushUrl = "https://sandbox.safaricom.co.ke/mpesa/stkpush/v1/processrequest";
 $headers = ["Authorization: Bearer $token", "Content-Type: application/json"];
 
-$callbackUrl = "https://yourdomain.com/public/callback.php"; // Update with your actual callback URL
+$callbackUrl = "https://yourdomain.com/public/callback.php";
 
 $payload = [
     "BusinessShortCode" => SHORTCODE,
