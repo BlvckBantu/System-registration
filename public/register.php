@@ -8,22 +8,27 @@
     <link rel="stylesheet" href="../assets/style.css">
 </head>
 <body>
-    <h2>User Registration</h2>
-    <?php if (isset($_SESSION['message'])) { echo "<p>{$_SESSION['message']}</p>"; unset($_SESSION['message']); } ?>
-    <form action="process_register.php" method="post">
-        <label>Username:</label>
-        <input type="text" name="username" required><br>
+    <div class="form-container">
+        <img src="../assets/logo.jpg" alt="Company Logo" class="logo">
+        <h2>User Registration</h2>
         
-        <label>Phone Number (2547XXXXXXXX):</label>
-        <input type="text" name="phone" required><br>
+        <?php if (isset($_SESSION['message'])) { echo "<p>{$_SESSION['message']}</p>"; unset($_SESSION['message']); } ?>
+        
+        <form action="process_register.php" method="post">
+            <label>Username:</label>
+            <input type="text" name="username" required><br>
+            
+            <label>Phone Number (2547XXXXXXXX):</label>
+            <input type="text" name="phone" required><br>
 
-        <label>Password:</label>
-        <input type="password" name="password" required><br>
+            <label>Password:</label>
+            <input type="password" name="password" required><br>
 
-        <label>Confirm Password:</label>
-        <input type="password" name="confirm_password" required><br>
+            <label>Confirm Password:</label>
+            <input type="password" name="confirm_password" required><br>
 
-        <button type="submit">Register</button>
-    </form>
+            <button type="submit">Register</button>
+        </form>
+    </div>
 </body>
 </html>

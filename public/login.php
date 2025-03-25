@@ -8,16 +8,21 @@
     <link rel="stylesheet" href="../assets/style.css">
 </head>
 <body>
-    <h2>Login</h2>
-    <?php if (isset($_SESSION['message'])) { echo "<p>{$_SESSION['message']}</p>"; unset($_SESSION['message']); } ?>
-    <form action="process_login.php" method="post">
-        <label>Phone Number:</label>
-        <input type="text" name="phone" required><br>
+    <div class="form-container">
+        <img src="../assets/logo.jpg" alt="Company Logo" class="logo">
+        <h2>Login</h2>
 
-        <label>Password:</label>
-        <input type="password" name="password" required><br>
+        <?php if (isset($_SESSION['message'])) { echo "<p>{$_SESSION['message']}</p>"; unset($_SESSION['message']); } ?>
+        
+        <form action="process_login.php" method="post">
+            <label>Phone Number:</label>
+            <input type="text" name="phone" required><br>
 
-        <button type="submit">Login</button>
-    </form>
+            <label>Password:</label>
+            <input type="password" name="password" required><br>
+
+            <button type="submit">Login</button>
+        </form>
+    </div>
 </body>
 </html>

@@ -14,8 +14,17 @@ form {
     margin: auto;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
 }
 
+/* Logo Styling */
+.logo {
+    max-width: 100px;  /* Adjust size as needed */
+    display: block;
+    margin: 0 auto 15px; /* Centers the logo and adds space below */
+}
+
+/* Input Fields */
 input[type="text"], input[type="password"] {
     width: 90%;
     padding: 8px;
@@ -24,6 +33,7 @@ input[type="text"], input[type="password"] {
     border-radius: 5px;
 }
 
+/* Button Styling */
 button {
     background: #28a745;
     color: white;
@@ -43,6 +53,7 @@ h2 {
     color: #333;
 }
 
+/* Logout Button */
 .logout-btn {
     display: inline-block;
     background: red;
